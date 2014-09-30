@@ -62,6 +62,17 @@ body {
   cursor: pointer;
 }
 
+.sales-2 {
+  display: inline-block;
+  padding: 1em;
+  position: relative;
+  width: 24em;
+
+  background-color: rgba(127, 219, 255, 0.6);
+  border-radius: 1em;
+  cursor: pointer;
+}
+
 .sales__title {
   bottom: 1rem;
   left: 0;
@@ -87,9 +98,34 @@ body {
   padding: 2em;
   position: absolute;
   width: 90%;
+  opacity: 0;
 
   background-color: #000;
   border-radius: 6px;
+  transition: all 250ms linear;
+}
+
+.sales__details[data-state="active"] {
+	margin-top: 0;
+	opacity: 1;
+}
+
+.sales__details-2 {
+  left: 0;
+  margin: 25px 5% 0;
+  padding: 2em;
+  position: absolute;
+  width: 90%;
+  opacity: 0;
+
+  background-color: #000;
+  border-radius: 6px;
+  transition: all 250ms linear;
+}
+
+.sales__details-2[data-state="active"] {
+	margin-top: 0;
+	opacity: 1;
 }
 
 .sales__details::before {
